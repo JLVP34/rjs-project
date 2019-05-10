@@ -1,14 +1,17 @@
 import React from 'react';
-import translate from 'i18next';
+import Grid from '@material-ui/core/Grid';
 
 import './App.scss';
+import AppConstants from './App.const';
 import NavbarComponent from './shared/component/nav-bar/NavbarComponent';
 
 function App() {
 
   return (
       <div className='root'>
-        <NavbarComponent/>
+          <Grid container spacing={AppConstants.maxGridSize}>
+            <NavbarComponent/>
+          </Grid>
       </div>
   );
 }

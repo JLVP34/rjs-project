@@ -1,5 +1,5 @@
 const NavbarComponentConstants = {
-    maxGridSize: 24
+    defaultSize: 12
 };
 
 export default NavbarComponentConstants;

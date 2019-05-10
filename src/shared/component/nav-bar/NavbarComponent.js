@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import NavbarComponentConstants from './NavbarComponent.const';
 import Navbar from 'react-bootstrap/Navbar';
-import Trans from 'i18next';
-
+import Nav from 'react-bootstrap/Nav';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
+
+import NavbarComponentConstants from './NavbarComponent.const';
 
 const styles = theme => ({
     root: {
@@ -20,21 +19,16 @@ const styles = theme => ({
 });
 
 function NavbarComponent(props) {
-    const { classes } = props;
-
     return (
-        <Grid container spacing={NavbarComponentConstants.maxGridSize}>
-            <Grid item xs={12}>
-                <Navbar bg="dark" variant="dark">
-                    <Navbar.Brand href="#home">Brand link</Navbar.Brand>
-                </Navbar>
-            </Grid>
-            <Grid item xs={6}>
-                <Paper className={classes.paper}>xs=6</Paper>
-            </Grid>
-            <Grid item xs={6}>
-                <Paper className={classes.paper}>xs=6</Paper>
-            </Grid>
+        <Grid item xs={NavbarComponentConstants.defaultSize}>
+            <Navbar bg="dark" variant="dark">
+                <Navbar.Brand href="#home">Flight search</Navbar.Brand>
+                <Nav className="mr-auto">
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#features">Features</Nav.Link>
+                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                </Nav>
+            </Navbar>
         </Grid>
     );
 };
