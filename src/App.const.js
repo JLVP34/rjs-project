@@ -1,5 +1,3 @@
-const AppConstants = {
-    maxGridSize: 24
-};
+const AppConstants = {};
 
 export default AppConstants;

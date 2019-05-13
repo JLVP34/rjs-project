@@ -1,4 +1,6 @@
 import React from 'react';
+
+import { LinkContainer } from 'react-router-bootstrap';
 import PropTypes from 'prop-types';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -18,15 +20,21 @@ const styles = theme => ({
     },
 });
 
-function NavbarComponent(props) {
+function NavbarComponent() {
     return (
         <Grid item xs={NavbarComponentConstants.defaultSize}>
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Flight search</Navbar.Brand>
+                <Navbar.Brand>Flight search</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#features">Features</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
+                    <LinkContainer to="/home">
+                        <Nav.Link>Home</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/search">
+                        <Nav.Link>Search</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer to="/about">
+                        <Nav.Link>About</Nav.Link>
+                    </LinkContainer>
                 </Nav>
             </Navbar>
         </Grid>
