@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import { Jumbotron, Button } from 'react-bootstrap';
 
 import HomeConstants from './Home.const';
+import SearchForm from '../../../shared/comp/forms/search-form/SearchForm';
 
 const styles = theme => ({});
 
@@ -18,6 +19,7 @@ function Home() {
                     extra attention to featured content or information.</p>
                     <p><Button variant="primary">Learn more</Button></p>
             </Jumbotron>
+            <SearchForm/>
         </Grid>);
 }
 
