@@ -10,7 +10,8 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
 import SearchFormConstants from './SearchForm.const';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import SelectControl from '../controls/select/SelectControl';
 
 const styles = theme => ({
     root: {
@@ -19,7 +20,7 @@ const styles = theme => ({
     },
     formControl: {
         margin: theme.spacing.unit,
-        minWidth: 300,
+        minWidth: 150,
     },
     selectEmpty: {
         marginTop: theme.spacing.unit * 2,
@@ -36,29 +37,37 @@ class SearchForm extends React.Component {
 
     render() {
         const { classes } = this.props;
+        const dataMap = [
+            {label: 'Ten', value: 10},
+            {label: 'Twenty', value: 20},
+            {label: 'Thirty', value: 30},
+        ];
+        const dataMapC = [
+            {label: 'One', value: 1},
+            {label: 'Two', value: 2},
+            {label: 'Three', value: 3},
+        ];
 
         return (
             <Grid item xs={SearchFormConstants.defaultSize}>
-                <form className={classes.root} autoComplete="off">
+                <form className={classes.root} autoComplete='off'>
                     <Container>
-                        <FormControl className={classes.formControl}>
-                        <InputLabel htmlFor="age-simple">Age</InputLabel>
-                        <Select
-                            value={this.state.age}
-                            onChange={this.handleChange}
-                            inputProps={{
-                            name: 'age',
-                            id: 'age-simple',
-                            }}
-                        >
-                            <MenuItem value="">
-                            <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                        </FormControl>
+                        <Row>
+                            <Col>
+                                <SelectControl 
+                                    id='age-1' 
+                                    name='age'
+                                    inputLabel='Age'
+                                    dataMap={dataMap}/>
+                            </Col>
+                            <Col>
+                                <SelectControl 
+                                    id='cat-1' 
+                                    name='cat'
+                                    inputLabel='Category'
+                                    dataMap={dataMapC}/>
+                            </Col>
+                        </Row>
                     </Container>
                 </form>
             </Grid>
