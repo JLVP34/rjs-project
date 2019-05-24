@@ -4,13 +4,8 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
-
 import SearchFormConstants from './SearchForm.const';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import SelectControl from '../controls/select/SelectControl';
 
 const styles = theme => ({
@@ -19,7 +14,6 @@ const styles = theme => ({
         flexWrap: 'wrap',
     },
     formControl: {
-        margin: theme.spacing.unit,
         minWidth: 150,
     },
     selectEmpty: {
@@ -49,26 +43,31 @@ class SearchForm extends React.Component {
         ];
 
         return (
-            <Grid item xs={SearchFormConstants.defaultSize}>
+            <Grid item xs={SearchFormConstants.defaultSize} className="mb-3">
                 <form className={classes.root} autoComplete='off'>
-                    <Container>
-                        <Row>
-                            <Col>
-                                <SelectControl 
-                                    id='age-1' 
-                                    name='age'
-                                    inputLabel='Age'
-                                    dataMap={dataMap}/>
-                            </Col>
-                            <Col>
-                                <SelectControl 
-                                    id='cat-1' 
-                                    name='cat'
-                                    inputLabel='Category'
-                                    dataMap={dataMapC}/>
-                            </Col>
-                        </Row>
-                    </Container>
+                    <Card bg="light">
+                        <Card.Header>Contact</Card.Header>
+                        <Card.Body>
+                            <Container>
+                                <Row>
+                                    <Col>
+                                        <SelectControl 
+                                            id='age-1' 
+                                            name='age'
+                                            inputLabel='Age'
+                                            dataMap={dataMap}/>
+                                    </Col>
+                                    <Col>
+                                        <SelectControl 
+                                            id='cat-1' 
+                                            name='cat'
+                                            inputLabel='Category'
+                                            dataMap={dataMapC}/>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </Card.Body>
+                    </Card>
                 </form>
             </Grid>
         );

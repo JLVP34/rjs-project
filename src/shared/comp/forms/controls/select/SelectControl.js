@@ -1,7 +1,6 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
 import FormControl from '@material-ui/core/FormControl';
@@ -12,7 +11,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 const styles = theme => ({
     formControl: {
         margin: theme.spacing.unit,
-        minWidth: 150,
+        minWidth: 200,
     },
     selectEmpty: {
         marginTop: theme.spacing.unit * 2,

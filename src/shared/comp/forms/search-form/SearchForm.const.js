@@ -1,5 +1,5 @@
 const SearchFormConstants = {
-    defaultSize: 12
+    defaultSize: 6
 };
 
 export default SearchFormConstants;

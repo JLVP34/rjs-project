@@ -13,13 +13,15 @@ const styles = theme => ({});
 class Home extends React.Component {
     render() { 
         return (
-            <Grid item xs={HomeConstants.defaultSize} className="m-3">
-                <Jumbotron>
-                    <h1>Hello, world!</h1>
-                        <p>This is a simple hero unit, a simple jumbotron-style component for calling
-                        extra attention to featured content or information.</p>
-                        <p><Button variant="primary">Learn more</Button></p>
-                </Jumbotron>
+            <Grid container className="m-3">
+                <Grid item xs={12}>
+                    <Jumbotron>
+                        <h1>Hello, world!</h1>
+                            <p>This is a simple hero unit, a simple jumbotron-style component for calling
+                            extra attention to featured content or information.</p>
+                            <p><Button variant="primary">Learn more</Button></p>
+                    </Jumbotron>
+                </Grid>
                 <SearchForm/>
             </Grid>
         );
