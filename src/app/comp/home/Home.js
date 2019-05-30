@@ -5,7 +5,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { Jumbotron, Button } from 'react-bootstrap';
 
-import HomeConstants from './Home.const';
 import SearchForm from '../../../shared/comp/forms/search-form/SearchForm';
 
 const styles = theme => ({});
