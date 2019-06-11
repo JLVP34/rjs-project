@@ -5,15 +5,14 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { Jumbotron, Button } from 'react-bootstrap';
 
-import HomeConstants from './Home.const';
-import SearchForm from '../../../shared/comp/forms/search-form/SearchForm';
+import SearchForm from '../../../shared/components/forms/search-form/SearchForm';
 
 const styles = theme => ({});
 
 class Home extends React.Component {
     render() { 
         return (
-            <Grid container className="m-3">
+            <Grid container spacing={8} className="m-3">
                 <Grid item xs={12}>
                     <Jumbotron>
                         <h1>Hello, world!</h1>
@@ -22,6 +21,7 @@ class Home extends React.Component {
                             <p><Button variant="primary">Learn more</Button></p>
                     </Jumbotron>
                 </Grid>
+                <SearchForm/>
                 <SearchForm/>
             </Grid>
         );

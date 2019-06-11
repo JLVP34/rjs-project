@@ -4,15 +4,11 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
-import SearchFormConstants from './SearchForm.const';
+// import SearchFormConstants from './SearchForm.const';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import SelectControl from '../controls/select/SelectControl';
 
 const styles = theme => ({
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
     formControl: {
         minWidth: 150,
     },
@@ -43,7 +39,7 @@ class SearchForm extends React.Component {
         ];
 
         return (
-            <Grid item xs={SearchFormConstants.defaultSize} className="mb-3">
+            <Grid item xs className="mb-3">
                 <form className={classes.root} autoComplete='off'>
                     <Card bg="light">
                         <Card.Header>Contact</Card.Header>

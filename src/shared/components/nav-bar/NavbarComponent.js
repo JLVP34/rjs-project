@@ -23,19 +23,22 @@ const styles = theme => ({
 function NavbarComponent() {
     return (
         <Grid item xs={NavbarComponentConstants.defaultSize}>
-            <Navbar bg="dark" variant="dark">
+            <Navbar bg="dark" variant="dark" expand="lg">
                 <Navbar.Brand>Flight search</Navbar.Brand>
-                <Nav className="mr-auto">
-                    <LinkContainer to="/home">
-                        <Nav.Link>Home</Nav.Link>
-                    </LinkContainer>
-                    <LinkContainer to="/search">
-                        <Nav.Link>Search</Nav.Link>
-                    </LinkContainer>
-                    <LinkContainer to="/about">
-                        <Nav.Link>About</Nav.Link>
-                    </LinkContainer>
-                </Nav>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto">
+                        <LinkContainer to="/home">
+                            <Nav.Link>Home</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/search">
+                            <Nav.Link>Search</Nav.Link>
+                        </LinkContainer>
+                        <LinkContainer to="/about">
+                            <Nav.Link>About</Nav.Link>
+                        </LinkContainer>
+                    </Nav>
+                </Navbar.Collapse>
             </Navbar>
         </Grid>
     );

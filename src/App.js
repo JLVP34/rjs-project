@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 
 import './App.scss';
-import NavbarComponent from './shared/comp/nav-bar/NavbarComponent';
+import NavbarComponent from './shared/components/nav-bar/NavbarComponent';
 
-import Home from './app/comp/home/Home';
+import Home from './app/components/home/Home';
 
 class App extends React.Component {
 
